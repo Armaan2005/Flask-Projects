@@ -1,0 +1,119 @@
+/* Base styling for body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Default gradient background (fallback) */
+body.default {
+    background: linear-gradient(to bottom, rgb(3, 3, 139), #6a00f4);
+}
+
+/* Sunny/Clear weather */
+body.clear {
+    background: linear-gradient(to bottom, #f7d358, #f2a007);
+}
+
+/* Rainy weather */
+body.rain {
+    background: url('../images/rain.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Cloudy weather */
+body.clouds {
+    background: url('../images/clouds.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Snowy weather */
+body.snow {
+    background: url('../images/snow.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container to center form and output */
+.container {
+    margin-top: 50px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Weather form styling */
+.weather-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.weather-form input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    flex: 1;
+    outline: none;
+}
+
+.weather-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.weather-form button:hover {
+    background-color: #e68900;
+}
+
+/* Weather result card */
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on card */
+.weather-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+/* City name styling */
+.weather-card h2 {
+    color: #222222;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Temperature and description styling */
+.weather-card p {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Label like "Temperature:" and "Description:" */
+.weather-card strong {
+    color: #222222;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-weight: bold;
+}

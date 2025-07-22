@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+</head>
+<body>
+    <div class="outer">
+        <img src="{{ url_for('static', filename='images/weather.png') }}" height="300" width="300" class="Weather">
+        <h1 class='Weatherword'>Weather</h1>
+        <h1 class='Forecastsword'>ForeCasts</h1>
+        
+           <form action="/WeatherForm" method="GET">
+    <button type="submit">Get Start </button>
+</form>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+</head>
+<body class="{{ weather_class or 'default' }}">
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+
+        <!-- Weather search form -->
+        <form method="POST" class="weather-form" action='/weather'>
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">Check</button>
+        </form>
+
+        <!-- Weather result display -->
+        {% if city and temperature and description %}
+            <div class="weather-card">
+                <h2>{{ city }}</h2>
+                <p><strong>Temperature:</strong> {{ temperature }}°C</p>
+                <p><strong>Description:</strong> {{ description }}</p>
+            </div>
+        {% elif error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

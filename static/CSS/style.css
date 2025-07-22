@@ -1,0 +1,34 @@
+body{
+    background:linear-gradient(to bottom,rgb(3, 3, 139),#6a00f4);
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    height:100vh;
+    margin:0;
+}
+.outer{
+    background-color:rgba(255,255,255,0.05);
+    text-align: center;
+    padding: 30px;
+    border-radius:20px;
+    
+}
+.Weatherword{
+    color:white;
+}
+.Forecastsword{
+    color:rgb(186, 186, 10);
+}
+
+button{
+    background-color: #ffd700;
+    border: none;
+    width:50%;
+    border-radius:15px;
+    height: 29px;
+}
+.image{
+    border: none;
+    display: block;
+    outline: none;
+}
